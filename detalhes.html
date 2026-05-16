@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Item</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light border-bottom">
+        <div class="container d-flex align-items-center">
+            <a href="index.html" class="text-decoration-none me-3 fs-4">←</a>
+            <a class="navbar-brand fw-bold" href="index.html">LOGOTIPO</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4" id="detalhe-container">
+        <h4 class="mb-3 border-bottom pb-2">Informações Gerais</h4>
+        <div class="row bg-light p-3 border rounded mb-5 align-items-center">
+            <div class="col-md-5 mb-3 mb-md-0">
+                <img id="detalhe-imagem" src="" class="img-fluid rounded shadow-sm w-100" alt="">
+            </div>
+            <div class="col-md-7">
+                <h2 id="detalhe-nome" class="mb-3"></h2>
+                <ul class="list-group list-group-flush bg-transparent">
+                    <li class="list-group-item bg-transparent px-0"><strong>País:</strong> <span id="detalhe-pais"></span></li>
+                    <li class="list-group-item bg-transparent px-0"><strong>Data da Viagem:</strong> <span id="detalhe-data"></span></li>
+                    <li class="list-group-item bg-transparent px-0"><strong>Descrição:</strong> <span id="detalhe-descricao"></span></li>
+                    <li class="list-group-item bg-transparent px-0"><strong>Conteúdo:</strong> <span id="detalhe-conteudo"></span></li>
+                </ul>
+            </div>
+        </div>
+
+        <h4 class="mb-3 border-bottom pb-2">Fotos do Item associado</h4>
+        <div class="row" id="atracoes-container"></div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -117,4 +117,32 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         });
     }
+    if (currentPage === "detalhes.html") {
+        const urlParams = new URLSearchParams(window.location.search);
+        const idParam = parseInt(urlParams.get("id"));
+        const lugar = dados.lugares.find(l => l.id === idParam);
+
+        if (lugar) {
+            document.getElementById("detalhe-imagem").src = lugar.imagem_pincipal;
+            document.getElementById("detalhe-nome").textContent = lugar.nome;
+            document.getElementById("detalhe-pais").textContent = lugar.pais;
+            document.getElementById("detalhe-data").textContent = lugar.data;
+            document.getElementById("detalhe-descricao").textContent = lugar.descricao;
+            document.getElementById("detalhe-conteudo").textContent = lugar.conteudo;
+
+            const atracoesContainer = document.getElementById("atracoes-container");
+            lugar.atracoes.forEach(atracao => {
+                atracoesContainer.innerHTML += `
+                    <div class="col-6 col-md-3 mb-4">
+                        <div class="card border-0">
+                            <img src="${atracao.imagem}" class="atracao-img mb-2" alt="${atracao.nome}">
+                            <div class="bg-light p-2 text-center rounded border">
+                                <h6 class="mb-0 text-truncate" style="font-size: 0.9rem;">${atracao.nome}</h6>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+    }
 });
